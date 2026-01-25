@@ -9,6 +9,7 @@ The primary function of this project is to automate the process of data collecti
 **Web Scraping:** Fetches and parses article data (title, URL) from the brasilnippou.com news portal.
 
 **AI-Powered Verification:** Integrates with the Google Gemini API to validate if an article's title aligns with its assigned category.
+
 **Concurrent Processing:** Employs a worker pool to efficiently process multiple articles in parallel, significantly speeding up the scraping 
 process.
 
