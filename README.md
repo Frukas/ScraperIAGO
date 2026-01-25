@@ -7,19 +7,27 @@ The primary function of this project is to automate the process of data collecti
 
 ## Features
 **Web Scraping:** Fetches and parses article data (title, URL) from the brasilnippou.com news portal.
+
 **AI-Powered Verification:** Integrates with the Google Gemini API to validate if an article's title aligns with its assigned category.
-**Concurrent Processing:** Employs a worker pool to efficiently process multiple articles in parallel, significantly speeding up the scraping process.
+**Concurrent Processing:** Employs a worker pool to efficiently process multiple articles in parallel, significantly speeding up the scraping 
+process.
 **Data Persistence:** Uses a local SQLite database (artigos.db) to store article information and verification results, ensuring data is not re-processed on subsequent runs.
+
 **Basic Authentication:** Supports fetching content from pages protected by basic HTTP authentication.
 
 ## Architecture
 The project is structured into several distinct packages, each with a specific responsibility:
 
 **main.go:** The application's entry point. It orchestrates the scraper, the worker pool, and the database repository.
+
 **/scraper:** Contains the logic for fetching raw HTML from web pages and extracting article information.
+
 **/ia:** Manages all interactions with the Google Gemini API, including prompt engineering and API requests.
+
 **/repository:** Implements the data access layer using GORM, handling all communication with the SQLite database.
+
 **/models:** Defines the core data structures used throughout the application, most notably the Article struct.
+
 **/util:** Provides a generic, concurrency-safe worker pool for executing tasks.
 
 ## How It Works
@@ -35,7 +43,8 @@ Finally, the new article data, along with the AI's verification status, is saved
 ## Prerequisites
 Go (version 1.22 or later)
 A Google Gemini API Key
-Installation
+
+### Installation
 Clone the repository to your local machine:
 
 ```
@@ -43,13 +52,13 @@ git clone https://github.com/frukas/scraperiago.git
 cd scraperiago
 ```
 
-##Install the required dependencies:
+### Install the required dependencies:
 
 ```
 go mod tidy
 ```
 
-Configuration
+### Configuration
 Before running the application, you must add your Google Gemini API key.
 
 Open the file internal/ia/geminiAI.go.
