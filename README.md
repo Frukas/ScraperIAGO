@@ -11,6 +11,7 @@ The primary function of this project is to automate the process of data collecti
 **AI-Powered Verification:** Integrates with the Google Gemini API to validate if an article's title aligns with its assigned category.
 **Concurrent Processing:** Employs a worker pool to efficiently process multiple articles in parallel, significantly speeding up the scraping 
 process.
+
 **Data Persistence:** Uses a local SQLite database (artigos.db) to store article information and verification results, ensuring data is not re-processed on subsequent runs.
 
 **Basic Authentication:** Supports fetching content from pages protected by basic HTTP authentication.
