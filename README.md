@@ -1,6 +1,6 @@
 # ScraperIAGO
 
-ScraperIAGO is a Go application designed to scrape news articles from the brasilnippou.com website. It leverages Google's Gemini AI to intelligently verify if the scraped articles are correctly categorized based on their titles and persists the results in a SQLite database.
+ScraperIAGO is a Go application designed to scrape news articles from the brasilnippou.com website. It leverages Google's Gemini AI to intelligently verify if the scraped articles are correctly categorized based on their titles and persists the results in a SQLite database.  - work in progress -
 
 ## Overview
 The primary function of this project is to automate the process of data collection and content verification. It fetches paginated search results for specific keywords, extracts article information, and uses a concurrent worker pool to process them. For each new article, it queries the Gemini AI to confirm category relevance before saving the data, thus preventing redundant processing.
